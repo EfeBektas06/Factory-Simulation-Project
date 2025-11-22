@@ -6,7 +6,7 @@ import sqlite3
 
 # =============================================================================
 # PROJE: Endüstriyel Üretim Hattı Simülasyonu (Dijital İkiz)
-# YAZAN: [Adını Buraya Yaz]
+# YAZAN: [EFE BEKTAŞ]
 # AÇIKLAMA: Monte Carlo yöntemi ile üretim hattı darboğaz, kapasite ve finansal risk analizi.
 # =============================================================================
 
@@ -104,7 +104,7 @@ def gunluk_simulasyon_yap():
 # 3. MONTE CARLO VE VERİ ANALİZİ
 # ==========================================
 if __name__ == "__main__":
-    print(f"🚀 Simülasyon Başlatılıyor... ({SIMULASYON_GUN_SAYISI} Gün)")
+    print(f" Simülasyon Başlatılıyor... ({SIMULASYON_GUN_SAYISI} Gün)")
 
     veri_listesi = []
 
@@ -134,12 +134,12 @@ if __name__ == "__main__":
     # --- EXCEL ÇIKTISI ---
     try:
         df.to_excel("Simulasyon_Raporu.xlsx", index=False)
-        print("✅ Excel raporu oluşturuldu.")
+        print(" Excel raporu oluşturuldu.")
     except:
-        print("⚠️ Excel kütüphanesi eksik olabilir, atlanıyor.")
+        print(" Excel kütüphanesi eksik olabilir, atlanıyor.")
 
     # --- SQL ENTEGRASYONU ---
-    print("🗄️ Veriler SQL Veritabanına (SQLite) işleniyor...")
+    print(" Veriler SQL Veritabanına (SQLite) işleniyor...")
     baglanti = sqlite3.connect('fabrika_loglari.db')
     imlec = baglanti.cursor()
 
@@ -163,10 +163,10 @@ if __name__ == "__main__":
 
     baglanti.commit()
     baglanti.close()
-    print("✅ SQL Kaydı Tamamlandı.")
+    print(" SQL Kaydı Tamamlandı.")
 
     # --- GÖRSELLEŞTİRME ---
-    print("📊 Grafikler oluşturuluyor...")
+    print(" Grafikler oluşturuluyor...")
     plt.figure(figsize=(12, 5))
 
     plt.subplot(1, 2, 1)
@@ -182,3 +182,4 @@ if __name__ == "__main__":
 
     plt.tight_layout()
     plt.show()
+
