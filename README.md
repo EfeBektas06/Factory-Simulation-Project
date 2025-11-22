@@ -1,4 +1,4 @@
-\# Endüstriyel Üretim Hattı Simülasyonu ve Finansal Analiz 🏭
+\# Endüstriyel Üretim Hattı Simülasyonu ve Finansal Analiz 
 
 
 
@@ -57,4 +57,5 @@ Simülasyon sonucunda sistem şunları üretir:
    ```bash
 
    pip install -r requirements.txt
+
 
